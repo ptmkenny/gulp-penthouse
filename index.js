@@ -1,7 +1,7 @@
 'use strict';
 
 var penthouse = require('penthouse');
-var PluginError = require('gulp-util').PluginError;
+var PluginError = require('plugin-error');
 var extend = require('util')._extend;
 var through = require('through2');
 
@@ -10,8 +10,6 @@ module.exports = function gulpCriticalCss(options) {
         out: 'critical.css',
         /** ms; abort critical CSS generation after this timeout */
         timeout: 30000,
-        /** set to true to throw on CSS errors (will run faster if no errors) */
-        strict: false,
         /** characters; strip out inline base64 encoded resources larger than this */
         maxEmbeddedBase64Length: 1000,
         /** specify which user agent string when loading the page */
