@@ -24,7 +24,6 @@ gulp.task('critical-css', function () {
             url: 'http://localhost:9000',
             width: 1300,
             height: 900,
-            strict: true,
             userAgent: 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)'
         }))
         .pipe(gulp.dest('./dist/css/'));
